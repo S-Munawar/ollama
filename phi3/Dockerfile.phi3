@@ -1,12 +1,5 @@
 FROM ollama/ollama
 
-# Pull smallest usable model
-FROM ollama/ollama
-
 EXPOSE 11434
 
 CMD sh -c "ollama serve & sleep 5 && ollama pull phi3 && wait"
-
-EXPOSE 11434
-
-CMD ["ollama", "serve"]
